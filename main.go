@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	api := slack.New("xoxb-40063112196-aoiC3fEC7Y65JRStT2f31vxt")
+	api := slack.New("")
 	//	api.SetDebug(true)
 	ch, err := api.GetChannels(false)
 	if err != nil {
