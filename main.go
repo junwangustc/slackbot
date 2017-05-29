@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	api := slack.New("")
+	api := slack.New("Your-Token")
 	//	api.SetDebug(true)
 	ch, err := api.GetChannels(false)
 	if err != nil {
@@ -19,6 +19,7 @@ func main() {
 	}
 	rtm := api.NewRTM()
 	go rtm.ManageConnection()
+	fmt.Println("---------Just loop-----------")
 Loop:
 	for {
 		select {
